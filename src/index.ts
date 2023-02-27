@@ -13,7 +13,7 @@ function F9(e: { key: string }): void {
 
 export async function start(): Promise<void> {
   document.body.addEventListener("keyup", F9);
-  window.replugged.updater.checkAllUpdates().then((s) => window.replugged.updater.installAllUpdates())
+  //window.replugged.updater.checkAllUpdates().then((s) => window.replugged.updater.installAllUpdates())
 }
 
 export function stop(): void {
