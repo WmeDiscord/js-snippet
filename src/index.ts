@@ -1,4 +1,5 @@
 import { Injector, Logger, common, themes } from "replugged";
+import { oaCSS } from "./openAsarSplashCSS";
 
 const inject = new Injector();
 const logger = Logger.plugin("JS-Snippets");
@@ -13,7 +14,7 @@ function F9(e: { key: string }): void {
 
 export async function start(): Promise<void> {
   document.body.addEventListener("keyup", F9);
-  //window.replugged.updater.checkAllUpdates().then((s) => window.replugged.updater.installAllUpdates())
+  await oaCSS();
 }
 
 export function stop(): void {
